@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
   // a number with the std::stod or std::stof function.
   double temp = {0};
   for (int i = 1; i <= arguments.size() - 1; i++) {
-    temp += std::stof(arguments[i]);
+    temp += std::stod(arguments[i]);
   }
 
   // After the loop has finished summing the arguments, calculate the
