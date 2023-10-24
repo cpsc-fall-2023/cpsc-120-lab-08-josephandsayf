@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
   // of the arguments vector.
   // Each argument is a std::string. You will need to convert each string into
   // a number with the std::stod or std::stof function.
-  double temp = {0};
+  double temp = 0;
   for (int i = 1; i <= arguments.size() - 1; i++) {
     temp += std::stod(arguments[i]);
   }
