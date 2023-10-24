@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
   // Use cout to print output following the pattern
   // Your order: A *PROTEIN* sandwich on *BREAD* with *CONDIMENT*.
   // on its own line.
-  std::cout << "Your order: A " << protein << " sandwich on " << bread << 
-   " with " << condiment << ".\n";
+  std::cout << "Your order: A " << protein << " sandwich on " << bread 
+            << " with " << condiment << ".\n";
   return 0;
 }
