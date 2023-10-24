@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  // Write a for-each loop to sum (add up) all of the command line
+  // Write a for-each loop to sum add up all of the command line
   // arguments.
   // Use a double or float type so that your program preserves fractional
   // values.
@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
   // After the loop has finished summing the arguments, calculate the
   // average of the values. Recall that the average is the total value divided
   // by the number of values.
-  double average = temp/(arguments.size() - 1);
+  double average = temp / (arguments.size() - 1);
 
   // Use cout to print out a message of the form
   // average = *AVERAGE*
