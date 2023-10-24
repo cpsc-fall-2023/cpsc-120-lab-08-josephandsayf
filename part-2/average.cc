@@ -26,14 +26,17 @@ int main(int argc, char* argv[]) {
   // Each argument is a std::string. You will need to convert each string into
   // a number with the std::stod or std::stof function.
   double temp = 0;
-  for (int i = 1; i <= arguments.size() - 1; i++) {
-    temp += std::stod(arguments[i]);
+  for (std::string& str : arguments) {
+    if (str == "./a.out" || str == "./average") {
+      continue;
+    }
+    temp += std::stod(str);
   }
 
   // After the loop has finished summing the arguments, calculate the
   // average of the values. Recall that the average is the total value divided
   // by the number of values.
-  double average = temp / (arguments.size() - 1);
+  double average = temp / (static_cast<double>(arguments.size()) - 1);
 
   // Use cout to print out a message of the form
   // average = *AVERAGE*
