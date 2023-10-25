@@ -6,7 +6,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <iomanip>
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
@@ -26,9 +25,11 @@ int main(int argc, char* argv[]) {
   // of the arguments vector.
   // Each argument is a std::string. You will need to convert each string into
   // a number with the std::stod or std::stof function.
-  double temp = 0.000000;
+  double temp = 0;
+  bool first = true;
   for (std::string& str : arguments) {
-    if (str == "./a.out" || str == "./average") {
+    if (first) {
+      first = false;
       continue;
     }
     temp += std::stod(str);
@@ -42,9 +43,6 @@ int main(int argc, char* argv[]) {
   // Use cout to print out a message of the form
   // average = *AVERAGE*
   // on its own line.
-  std::cout << "average = ";
-  std::cout << std::fixed;
-  std::cout << std::setprecision(6);
-  std::cout << average << "\n";
+  std::cout << "average = " << average << "\n";
   return 0;
 }
